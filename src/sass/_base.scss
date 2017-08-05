@@ -1,0 +1,50 @@
+img {
+	max-width: 100%;
+}
+
+.contain {
+	@include outer-container;
+	padding: 0 1em;
+
+	&.centered {
+		text-align: center;
+	}
+
+	@include media($tablet) {
+		padding: 0 2em;
+	}
+
+	@include media(rem(769)) {
+		padding: 0 2%;
+	}
+
+}
+
+.content-page {
+	.contain {
+		main {
+			background: #fff;
+			padding: 2em;
+			@include span-columns(12);
+
+			&.tile-fix{
+				padding: 0;
+				background: none;
+
+			}
+
+			@include media(rem(769)) {
+				@include span-columns(8.5);
+			}
+
+		}
+
+		aside {
+			@include span-columns(12);
+
+			@include media(rem(769)) {
+				@include span-columns(3.5);
+			}
+		}
+	}
+}

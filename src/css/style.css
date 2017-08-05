@@ -1,0 +1,456 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize   */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.contain {
+  max-width: 90em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+}
+.contain:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contain.centered {
+  text-align: center;
+}
+@media screen and (min-width: 48em) {
+  .contain {
+    padding: 0 2em;
+  }
+}
+@media screen and (min-width: 48.0625rem) {
+  .contain {
+    padding: 0 2%;
+  }
+}
+
+.content-page .contain main {
+  background: #fff;
+  padding: 2em;
+  float: left;
+  display: block;
+  margin-right: 4.72458%;
+  width: 100%;
+}
+.content-page .contain main:last-child {
+  margin-right: 0;
+}
+.content-page .contain main.tile-fix {
+  padding: 0;
+  background: none;
+}
+@media screen and (min-width: 48.0625rem) {
+  .content-page .contain main {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 69.45533%;
+  }
+  .content-page .contain main:last-child {
+    margin-right: 0;
+  }
+}
+.content-page .contain aside {
+  float: left;
+  display: block;
+  margin-right: 4.72458%;
+  width: 100%;
+}
+.content-page .contain aside:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 48.0625rem) {
+  .content-page .contain aside {
+    float: left;
+    display: block;
+    margin-right: 4.72458%;
+    width: 25.82009%;
+  }
+  .content-page .contain aside:last-child {
+    margin-right: 0;
+  }
+}
+
+@font-face {
+  font-family: 'mccann-icons';
+  src: url("../fonts/font-icons/icomoon.eot?9tqpuc");
+  src: url("../fonts/font-icons/icomoon.eot?9tqpuc#iefix") format("embedded-opentype"), url("../fonts/font-icons/icomoon.woff?9tqpuc") format("woff"), url("../fonts/font-icons/icomoon.svg?9tqpuc#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*=" icon-"],
+[class^="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mccann-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+
+.icon-chevron-down-thick:before {
+  content: "\e901";
+}
+
+.icon-shopping-bag-1:before {
+  content: "\e902";
+}
+
+.icon-shopping-bag-2:before {
+  content: "\e903";
+}
+
+.icon-search:before {
+  content: "\e904";
+}
+
+body,
+html {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px !important;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+#main-navigation {
+  padding: 1.25rem 0;
+}
+#main-navigation .top-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+#main-navigation .top-navigation li {
+  display: inline-block;
+}
+#main-navigation .top-navigation li:not(:last-child) {
+  margin-right: 2rem;
+}
+#main-navigation .top-navigation li.checkout-item [class^="icon-"] {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.845rem;
+}
+#main-navigation .top-navigation li.checkout-item [class^="icon-"]:before {
+  font-size: 2.9rem;
+}
+#main-navigation .top-navigation li.checkout-item [class^="icon-"] > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #444;
+}
+#main-navigation .top-navigation li a {
+  color: #fff;
+  font-family: "Roboto Slab", helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+  background-color: #8d6e63;
+  background-image: url(../img/davide-cantelli-cropped.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover !important;
+}
+
+header .header-toggles {
+  float: left;
+}
+header .menu-icon {
+  position: relative;
+  background: 0;
+  float: left;
+  width: 2.5rem;
+  height: 1.875rem;
+  outline: 0;
+  padding: 0;
+  border: 0;
+  z-index: 999;
+}
+header .menu-icon:hover .bar::before {
+  -webkit-transform: translateY(-0.9rem) rotate(0deg);
+  -moz-transform: translateY(-0.9rem) rotate(0deg);
+  -ms-transform: translateY(-0.9rem) rotate(0deg);
+  -o-transform: translateY(-0.9rem) rotate(0deg);
+  transform: translateY(-0.9rem) rotate(0deg);
+}
+header .menu-icon:hover .bar::after {
+  -webkit-transform: translateY(0.9rem) rotate(0deg);
+  -moz-transform: translateY(0.9rem) rotate(0deg);
+  -ms-transform: translateY(0.9rem) rotate(0deg);
+  -o-transform: translateY(0.9rem) rotate(0deg);
+  transform: translateY(0.9rem) rotate(0deg);
+}
+header .menu-icon.active .bar {
+  background: 0;
+}
+header .menu-icon.active .bar::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+header .menu-icon.active .bar::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+header .menu-icon.active .bar::before, header .menu-icon.active .bar::after {
+  top: 0;
+  background: #fff;
+}
+header .menu-icon.active .bar, header .menu-icon.active .bar::before, header .menu-icon.active .bar::after {
+  -webkit-transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s;
+  -moz-transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s;
+  transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s;
+}
+header .menu-icon .bar, header .menu-icon .bar::before, header .menu-icon .bar::after {
+  -webkit-transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear;
+  -moz-transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear;
+  transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear;
+  position: absolute;
+  background: #fff;
+  margin: auto;
+  width: 100%;
+  height: 4px;
+  content: '';
+}
+header .menu-icon .bar {
+  margin-top: -0.2rem;
+}
+header .menu-icon .bar::before {
+  -webkit-transform: translateY(-0.7rem) rotate(0deg);
+  -moz-transform: translateY(-0.7rem) rotate(0deg);
+  -ms-transform: translateY(-0.7rem) rotate(0deg);
+  -o-transform: translateY(-0.7rem) rotate(0deg);
+  transform: translateY(-0.7rem) rotate(0deg);
+}
+header .menu-icon .bar::after {
+  -webkit-transform: translateY(0.7rem) rotate(0deg);
+  -moz-transform: translateY(0.7rem) rotate(0deg);
+  -ms-transform: translateY(0.7rem) rotate(0deg);
+  -o-transform: translateY(0.7rem) rotate(0deg);
+  transform: translateY(0.7rem) rotate(0deg);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+header {
+  .header-toggles {
+    float: left;
+  }
+
+  .menu-icon {
+    position: relative;
+    background: 0;
+    float: left;
+    width: rem(40);
+    height: rem(30);
+    outline: 0;
+    padding: 0;
+    border: 0;
+    z-index: 999;
+
+    &:hover .bar {
+      &::before {
+        @include transform(translateY(-0.9rem) rotate(0deg));
+      }
+
+      &::after {
+        @include transform(translateY(0.9rem) rotate(0deg));
+      }
+    }
+
+    &.active .bar {
+     background: 0;
+
+     &::before {
+       @include transform(rotate(45deg));
+     }
+
+     &::after {
+       @include transform(rotate(-45deg));
+     }
+
+     &::before,
+     &::after {
+       top: 0;
+       background: #fff;
+     }
+
+     &,
+     &::before,
+     &::after {
+       @include transition(0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s);
+     }
+   }
+
+    .bar {
+    	&, &::before, &::after {
+        @include transition(0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear); //using the bourbon helper allows us to automatically prefix the transition property for browser support
+    		position: absolute;
+    		background: #fff;
+    		margin: auto;
+    		width: 100%;
+    		height: 4px;
+    		content: '';
+
+    	}
+
+    	& {
+    		margin-top: -0.2rem
+    	}
+
+    	&::before {
+        @include transform(translateY(-0.7rem) rotate(0deg));
+    	}
+
+    	&::after {
+        @include transform(translateY(0.7rem) rotate(0deg));
+    	}
+
+    	&::before,
+    	&::after {
+        //@include transform(rotate(0deg));
+    	}
+
+
+    }
+  }
+}

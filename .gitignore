@@ -1,0 +1,19 @@
+# Exclude these files from the git repo
+.htaccess
+error_log
+cgi-bin/
+.bash_history
+.dns
+.lastlogin
+.ssh/
+
+# Hidden system files
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+
+# Bower & NPM
+bower_components/
+src/components/
+node_modules/
+.sass-cache
