@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         src: ['src/sass/style.scss'],
-        dest: 'dist/css/style.min.css'
+        dest: 'css/style.min.css'
       }
     },
 
@@ -28,12 +28,12 @@ module.exports = function(grunt) {
       },
       dev: {
         files: {
-          'src/js/main.min.js': ['src/js/*.js']
+          'src/js/main.min.js': ['src/js/plugins/slippry/slippry.min.js','src/js/main.js']
         }
       },
       prod: {
         files: {
-          'dist/js/main.min.js': ['src/js/plugins/slippry/slippry.min.js','src/js/main.js']
+          'js/main.min.js': ['src/js/plugins/slippry/slippry.min.js','src/js/main.js']
         }
       }
     },
@@ -90,7 +90,8 @@ module.exports = function(grunt) {
   // ----------------
   // Default task is grunt is used with no further commands
   grunt.registerTask('default', [
-    'sass:dev'
+    'sass:dev',
+    'uglify:dev'
   ]);
 
 

@@ -141,7 +141,7 @@
         @include transform(translateY(0px));
         @include transition(all 0.2s ease-in-out);
       }
- 
+
       .icon-cross {
         position: absolute;
         right: 7px;
@@ -156,7 +156,7 @@
         font-size: 0.9rem;
         padding: 0.4rem 1.8rem 0.445rem 2rem;
         background: transparentize(#fff, 0.2);
-        @include transition(all 0.3s ease-in-out);
+        @include transition(background 0.3s ease-in-out, opacity 0.3s ease-in-out);
         opacity: 0;
         visibility: hidden;
         border: none;
