@@ -10,4 +10,13 @@ main {
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover !important;
+}    
+
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
 }

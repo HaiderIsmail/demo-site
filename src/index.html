@@ -36,15 +36,25 @@
 						<div class="header-toggles">
 							<!-- I always use 'js-' prefixed  class names when attaching elements to JS, this way no styles are attached to that class and hence can be removed without affecting any styles. -->
 							<button class="menu-icon js-side-menu-trigger" type="button">
-								<span class="bar"></span>
+								<div class="hamburger">
+									<span class="bar"></span>
+								</div>
+								<span class="txt">MENU</span>
 							</button>
+
+							<form class="search-form" role="search" action="index.html" method="post">
+								<button class="icon-search js-form-trigger" type="button"></button>
+								<span class="screen-reader-text">Search for:</span> <!-- for screen readers -->
+								<input type="search" placeholder="Type to search and hit enter" />
+								<span class="icon-cross js-form-close"></span>
+							</form>
 
 						</div>
 
 						<ul class="top-navigation">
 							<li><a href="#">Wishlist</a></li>
 							<li><a href="#">Sign In</a></li>
-							<li class="checkout-item"><a href="#">Checkout <span class="icon-shopping-bag-2"><span>1</span></span></a></li>
+							<li class="checkout-item"><a href="#">Checkout <span class="icon-shopping-bag-2"><span>0</span></span></a></li>
 						</ul>
 
 					</nav>
@@ -61,7 +71,8 @@
 
 
 	<footer>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="js/main.js"></script>
 	</footer>
 </body>
 

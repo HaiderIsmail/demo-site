@@ -21,12 +21,17 @@ module.exports = function(grunt) {
 
     // Grunt Uglify
     // ------------
-    // Minify seclected Javascript files into a single file for better delivery and reduced requests from the browser 
+    // Minify seclected Javascript files into a single file for better delivery and reduced requests from the browser
     uglify: {
       options: {
         mangle: false
       },
-      js: {
+      dev: {
+        files: {
+          'src/js/main.min.js': ['src/js/*.js']
+        }
+      },
+      prod: {
         files: {
           'dist/js/main.min.js': ['src/js/*.js']
         }
@@ -45,7 +50,7 @@ module.exports = function(grunt) {
       js: {
         files: ['src/js/*.js'],
         tasks: [
-          //  'uglify:js',
+          'uglify:dev',
           'notify:js'
         ]
       }
@@ -54,7 +59,6 @@ module.exports = function(grunt) {
     // Grunt Notify
     // ------------
     // Allow Grunt to use the OS X notifications feature
-
     notify: {
       scss: {
         options: {
@@ -85,29 +89,18 @@ module.exports = function(grunt) {
   // Development Task
   // ----------------
   // Default task is grunt is used with no further commands
-  grunt.registerTask('default', ['sass:dev']);
+  grunt.registerTask('default', [
+    'sass:dev'
+  ]);
 
-  // Dev Deployment Task
-  // -------------------
-  // Run "grunt dev" to initiate this task
-  // This will upload html_dev to the staging area
-
-  grunt.registerTask('dev', function() {
-    grunt.task.run([
-      'sass:html_dev',
-      //'uglify',
-      'notify:stage'
-    ]);
-  });
 
   // Production Deployment Task
   // --------------------------
   // Run "grunt prod" to initiate this task
-
   grunt.registerTask('prod', function() {
     grunt.task.run([
       'sass:prod',
-      'uglify',
+      'uglify:prod',
       'notify:prod'
     ]);
   });

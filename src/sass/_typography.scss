@@ -42,6 +42,9 @@ $roboto-slab: 'Roboto Slab', helvetica, arial, sans-serif;
 .icon-search:before {
   content: "\e904";
 }
+.icon-cross:before {
+  content: "\e905";
+}
 
 /////////////
 // Weights //
@@ -55,8 +58,8 @@ $bold: 700;
 // Colours //
 /////////////
 $primary: #f44336;
-$secondary: #444;
-
+$secondary: #e1c04c;
+$dune: #322e2e;
 $color-map-gray: ( 3000: hsl(0, 0, 95%), 4000: hsl(0, 0, 80%), 5000: hsl(0, 0, 62%), ); //USAGE: map-get($color-map-gray, 3000);
 
 // Box-shadows
