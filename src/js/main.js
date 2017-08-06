@@ -103,7 +103,8 @@ $(document).ready(function() {
     }
   });
 
-  //Made with <3 for McCann
+
+  console.log('//Made with <3 for McCann');
 
 
 
