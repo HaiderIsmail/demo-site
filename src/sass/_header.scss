@@ -1,11 +1,14 @@
 
 
   #main-navigation {
-    position: absolute;
+    position: fixed;
     width: 100%;
     background-color: transparent;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 30%, transparent 102%);
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3) 30%, transparent 102%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 30%, transparent 102%);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4) 30%, transparent 102%);
+    padding: rem(20) 0;
+  	z-index: 990;
+  	@include clearfix();
 
 
     .header-toggles {
