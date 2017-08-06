@@ -153,9 +153,10 @@
 
 
 	<footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<!-- deferring the loading of scripts to prevent render blocking -->
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<!-- <script src="js/plugins/slippry/slippry.min.js"></script> -->
-		<script src="js/main.min.js"></script>
+		<script defer src="js/main.min.js"></script>
 	</footer>
 </body>
 
