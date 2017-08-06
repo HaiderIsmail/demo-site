@@ -6,6 +6,7 @@ cgi-bin/
 .dns
 .lastlogin
 .ssh/
+src/
 
 # Hidden system files
 *.DS_Store
