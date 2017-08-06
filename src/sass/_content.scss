@@ -1,16 +1,180 @@
+
 main {
 
 }
 
 
-.hero {
+#hero-wrapper {
 	height: 100vh;
-	background-color: #8d6e63;
-	background-image: url(../img/davide-cantelli-cropped.jpg);
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: cover !important;
-}    
+	overflow: hidden;
+	position: relative;
+
+	.hero-arrow {
+		color: #fff;
+		position: absolute;
+		z-index: 900;
+		bottom: 1rem;
+		width: rem(62);
+    left: 0;
+		right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+		text-decoration: none;
+		font-size: 2.6rem;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+		@include animation-name(bounce);
+	  @include animation-duration(5s);
+	  @include animation-timing-function(ease-in-out);
+	  @include animation-iteration-count(infinite);
+	}
+
+	@keyframes bounce {
+		0% {
+			@include transform(translateY(0));
+		}
+
+		12% {
+			@include transform(translateY(20px));
+		}
+
+		24% {
+			@include transform(translateY(5px));
+		}
+
+		36% {
+			@include transform(translateY(20px));
+		}
+
+		48% {
+			@include transform(translateY(10px));
+		}
+
+		60% {
+			@include transform(translateY(20px));
+		}
+
+		72% {
+			@include transform(translateY(15px));
+		}
+
+		84% {
+			@include transform(translateY(20px));
+		}
+
+		100% {
+			@include transform(translateY(0));
+		}
+	}
+
+	.sy-box {
+		margin: 0;
+		padding:  0;
+	}
+
+	.sy-pager {
+		position: absolute;
+		right: 0;
+		bottom: 20px;
+		z-index: 100;
+		text-align: right;
+		padding-right: 1em;
+		z-index: 901;
+
+		li {
+			width: 0.875em;
+			height: 0.875em;
+
+			&.sy-active {
+				a {
+					background-color: transparent;
+
+					&:hover {
+						background-color: transparent !important;
+
+						&:before {
+							border-color: $secondary;
+						}
+					}
+
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+			a {
+				text-align: initial;
+				background-color: #fff;
+				position: relative;
+
+				&:before {
+					content: '';
+			    position: absolute;
+			    left: -3px;
+			    top: -3px;
+			    width: 102%;
+			    height: 102%;
+			    border-radius: 50%;
+			    border: 3px solid #fff;
+			    opacity: 0;
+				}
+
+				&:hover {
+					background-color: $secondary;
+				}
+			}
+		}
+	}
+
+
+	#hero {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			width: 100%;
+			height: 100vh;
+			background-color: #8d6e63;
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: cover !important;
+			display: table;
+			//background-image: url(../img/davide-cantelli-cropped.jpg);
+
+			.hero-inner {
+				display: table-cell;
+    	vertical-align: middle;
+    		text-align: center;
+
+				span {
+					color: #fff;
+					font-family: $roboto;
+					display: block;
+					line-height: 1em;
+					  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+
+					&.txt-line-1 {
+						font-size: 3.5rem;
+						font-weight: 100;
+						text-indent: -9rem;
+					}
+
+					&.txt-line-2 {
+						font-size: 3.2em;
+				    font-weight: 100;
+				    text-indent: 13.4rem;
+					}
+
+					&.txt-line-3 {
+						font-size: 92px;
+				    text-indent: 20rem;
+				    font-weight: 200;
+					}
+				}
+			}
+		}
+	}
+}
 
 
 .screen-reader-text {
@@ -19,4 +183,73 @@ main {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+.tiles {
+	@include span-columns(12);
+
+	&.two-col {
+		.tile {
+			@include span-columns(12);
+			padding: 3.125rem 4.2rem 0;
+			margin-bottom: 1.5rem;
+			text-align: center;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			background-size: 100%;
+
+			@include media($tablet) {
+				margin-bottom: 0;
+				@include span-columns(6);
+
+				&:nth-child(2n) {
+					@include omega(); //helper to remove the margin-right of element, in this instance, every second element inside .tiles
+				}
+			}
+
+			h2 {
+				color: #fff;
+		    font-weight: 100;
+		    font-size: 3.2em;
+		    line-height: 1em;
+		    margin: 0 0 rem(26);
+			}
+			p {
+				color: #fff;
+				font-size: 1.5em;
+				line-height: 1.3em;
+				font-family: $roboto-slab;
+				margin: 0 0 rem(17);
+			}
+
+			[class^="btn-"] {
+				width: 240px;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.tile {
+		@include span-columns(12);
+	}
+
+}
+
+.home-tiles {
+	padding: rem(62) 0;
+
+	.tile-find-colour, .tile-explore-range {
+		min-height: rem(796);
+	}
+
+
+	.tile-find-colour {
+		background: #78b69f;
+		background-image: url('../img/tile-bg.jpg');
+	}
+
+	.tile-explore-range {
+		background: #094d82;
+	}
 }

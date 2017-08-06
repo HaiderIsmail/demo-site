@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         src: ['src/sass/style.scss'],
-        dest: 'src/css/style.css'
+        dest: 'src/css/style.min.css'
       },
       prod: {
         options: {
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       },
       prod: {
         files: {
-          'dist/js/main.min.js': ['src/js/*.js']
+          'dist/js/main.min.js': ['src/js/plugins/slippry/slippry.min.js','src/js/main.js']
         }
       }
     },

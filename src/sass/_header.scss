@@ -1,4 +1,13 @@
-header {
+
+
+  #main-navigation {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 30%, transparent 102%);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3) 30%, transparent 102%);
+
+
     .header-toggles {
         float: left;
     }
@@ -23,20 +32,24 @@ header {
         }
 
         &.active .bar {
+          @include transition(background  0.2s ease-in-out, transform 0.2s);
+
+            @include transform(translateX(-30px));
             background: 0;
             &::before {
-                @include transform(rotate(45deg));
+                @include transform(translateX(30px) rotate(45deg));
             }
             &::after {
-                @include transform(rotate(-45deg));
+                @include transform(translateX(30px) rotate(-45deg));
             }
             &::after,
             &::before {
                 top: 0;
                 background: #fff;
             }
-            &, &::after, &::before {
-                @include transition(0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s);
+            &::after, &::before {
+              //@include transition(background linear 0.1s, 0.2s top linear, 0.2s transform linear 0s);
+              @include transition( background 0.3s ease-in-out, transform 0.25s ease-in-out );
             }
         }
 
@@ -47,6 +60,7 @@ header {
             position: relative;
             vertical-align: middle;
             margin-right: 0.78rem;
+            z-index: 999;
         }
 
         .bar {
@@ -106,6 +120,7 @@ header {
         }
 
         input[type="search"] {
+          visibility: visible;
           opacity: 1;
         }
       }
@@ -126,11 +141,11 @@ header {
         @include transform(translateY(0px));
         @include transition(all 0.2s ease-in-out);
       }
-
+ 
       .icon-cross {
         position: absolute;
         right: 7px;
-        top: 8px;
+        top: 9px;
         opacity: 0;
         cursor: pointer;
       }
@@ -143,6 +158,7 @@ header {
         background: transparentize(#fff, 0.2);
         @include transition(all 0.3s ease-in-out);
         opacity: 0;
+        visibility: hidden;
         border: none;
         border-bottom: 2px solid $dune;
         outline: none;
